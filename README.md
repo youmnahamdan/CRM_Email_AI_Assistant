@@ -26,22 +26,24 @@ Built with **Python**, **Streamlit**, and **LangChain**.
 ---
 ## 📁 Project Structure
 
+```text
 CRM_Email_AI_Assistant/
-├── prompts/ # Prompt templates for the assistant
-│ ├── generate_follow_up_prompt.txt
-│ ├── suggest_replies_prompt.txt
-│ └── summarize_interaction_prompt.txt
+├── prompts/                          # Prompt templates for the assistant
+│   ├── generate_follow_up_prompt.txt
+│   ├── suggest_replies_prompt.txt
+│   └── summarize_interaction_prompt.txt
 │
-├── sample_email_threads_CRM/ # Example email threads
-│ ├── billing_dispute.md
-│ ├── claim_inquiry.md
-│ └── ...
+├── sample_email_threads_CRM/        # Example email threads
+│   ├── billing_dispute.md
+│   ├── claim_inquiry.md
+│   └── ...
 │
 ├── src/
-│ ├── CRM_AI_Assistant.py    # Main Streamlit app (UI entry point)
-│ └── pages/     
-│     ├── 1_Summarize_Email_Interaction.py
-│     ├── 2_Suggest_Replies.py
-│     └── 3_Generate_Follow_Up_Email.py
+│   ├── CRM_AI_Assistant.py          # Main Streamlit app (UI entry point)
+│   └── pages/
+│       ├── 1_Summarize_Email_Interaction.py
+│       ├── 2_Suggest_Replies.py
+│       └── 3_Generate_Follow_Up_Email.py
 │
 └── README.md
+```
