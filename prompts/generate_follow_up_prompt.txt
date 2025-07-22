@@ -20,7 +20,7 @@ Email thread:
 
 Employee notes:
 ###
-{empolyee_notes}
+{employee_notes}
 ###
 
 Email tone:

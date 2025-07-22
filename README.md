@@ -27,23 +27,50 @@ Built with **Python**, **Streamlit**, and **LangChain**.
 ## 📁 Project Structure
 
 ```text
-CRM_Email_AI_Assistant/
-├── prompts/                          # Prompt templates for the assistant
-│   ├── generate_follow_up_prompt.txt
-│   ├── suggest_replies_prompt.txt
-│   └── summarize_interaction_prompt.txt
+email_assistant_crm/
 │
-├── sample_email_threads_CRM/        # Example email threads
-│   ├── billing_dispute.md
-│   ├── claim_inquiry.md
-│   └── ...
+├── app/    
+│   │
+│   ├── core/  
+│   │   └── __init__.py 
+│   │   └── config.py
+│   │   └── utils.py
+│   │
+│   ├── services/
+│   │   └── __init__.py 
+│   │   └── ai_services.py
+│   │
+│   ├── loaders/
+│   │   └── __init__.py 
+│   │   └── model_loader.py
+│   │   └── prompt_loader.py
+│   │   └── runnable_parallel_loader.py
+│   │
+│   ├── pages/                                    # Streamlit pages
+│   │   └── 1_Summarize_Email_Interaction.py
+│   │   └── 2_Suggest_Replies.py
+│   │   └── 3_Generate_Follow_Up_Email.py
+│   │
+│   └── CRM_AI_Assistant.py                       # Streamlit app entrypoint
 │
-├── src/
-│   ├── CRM_AI_Assistant.py          # Main Streamlit app (UI entry point)
-│   └── pages/
-│       ├── 1_Summarize_Email_Interaction.py
-│       ├── 2_Suggest_Replies.py
-│       └── 3_Generate_Follow_Up_Email.py
+├── tests/     
+│   └── __init__.py 
+│   └── test_ai_services.py
 │
-└── README.md
+├── prompts/...                                   # Contains system prompts (for display purposes)
+│
+├── sample_email_threads_CRM/...                  # Contains sample email threads for testing (feel free to use your own)
+│
+├── requirements.txt 
+├── README.md
+└── .env                                          # Add your own .env here
 ```
+
+## 📌 Required Environment Variables
+
+**Reminder: DO NOT use quotation marks (`""`)**
+
+| Variable         | Description                 | Example                 |
+|------------------|-----------------------------|--------------------------|
+| `LLM`            | Model name (LLM)            | `gpt-4o-mini`            |
+| `OPENAI_API_KEY` | Your OpenAI API key         | `sk-...`                 |

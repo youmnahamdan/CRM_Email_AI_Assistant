@@ -1,9 +1,8 @@
 import time
 import streamlit as st
+from services.ai_services import generate_follow_up_service
+from core.utils import create_copy_btn
 
-# Dummy API for demonstration
-def generate_follow_up(email_thread: str, follow_up_notes: str, email_tone: str):
-    return f'This is a follow-up. Tone: {email_tone}'
 
 # Typing animation
 def stream_data(text: str):
@@ -15,7 +14,6 @@ def stream_data(text: str):
 st.set_page_config(page_icon='🔁', page_title='Generate Follow-Up Email')
 
 # Title
-
 st.write('# 🔁 Generate Follow-Up Email')
 
 # Email Form
@@ -38,8 +36,9 @@ with st.form('email_form'):
     submitted = st.form_submit_button("✨ Generate Follow-Up")
 
 if submitted:
-    follow_up_email = generate_follow_up(email_thread, follow_up_notes, email_tone)
+    follow_up_email = generate_follow_up_service(email_thread, follow_up_notes, email_tone)
     st.write('## 🔁 Follow-Up Email')
     st.write_stream(stream_data(follow_up_email))
+    create_copy_btn(f"follow-up-text", follow_up_email)
 
 

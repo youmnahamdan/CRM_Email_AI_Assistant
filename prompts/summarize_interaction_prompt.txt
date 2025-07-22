@@ -11,6 +11,10 @@ Instructions:
 - Keep it concise (no more than one paragraph long).
 - Use clear and professional tone.
 - Do not include greetings, closings, or irrelevant details.
+Summary Notes (from user):
+###
+{summary_notes}
+###
 Email thread:
 ###
 {email_thread}
