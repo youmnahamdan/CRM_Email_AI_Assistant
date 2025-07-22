@@ -35,6 +35,6 @@ I'm also happy to collaborate or build a custom solution for your use case.""")
 st.markdown("""
 - 📧 **Contact**: hamdanyoumna@gmail.com  
 - 🔗 **LinkedIn**: www.linkedin.com/in/youmna-hamdan
-- 🔗 **GitHub**: github.com/youmnahamdan
+- 🔗 **GitHub**: https://github.com/youmnahamdan
 - 🖊️ **Created by**: Youmna Hamdan
 """)

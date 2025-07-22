@@ -36,9 +36,10 @@ with st.form('email_form'):
     submitted = st.form_submit_button("✨ Generate Follow-Up")
 
 if submitted:
-    follow_up_email = generate_follow_up_service(email_thread, follow_up_notes, email_tone)
-    st.write('## 🔁 Follow-Up Email')
-    st.write_stream(stream_data(follow_up_email))
-    create_copy_btn(f"follow-up-text", follow_up_email)
+    with st.spinner("Generating follow-up email..."):
+        follow_up_email = generate_follow_up_service(email_thread, follow_up_notes, email_tone)
+        st.write('## 🔁 Follow-Up Email')
+        st.write_stream(stream_data(follow_up_email))
+        create_copy_btn(f"follow-up-text", follow_up_email)
 
 
