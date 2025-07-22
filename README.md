@@ -51,6 +51,9 @@ email_assistant_crm/
 │   │   └── 2_Suggest_Replies.py
 │   │   └── 3_Generate_Follow_Up_Email.py
 │   │
+│   ├── streamlit/                                # Streamlit secrets (something like .env) 
+│   │   └── secrets.toml
+│   │
 │   └── CRM_AI_Assistant.py                       # Streamlit app entrypoint
 │
 ├── tests/     
@@ -62,15 +65,19 @@ email_assistant_crm/
 ├── sample_email_threads_CRM/...                  # Contains sample email threads for testing (feel free to use your own)
 │
 ├── requirements.txt 
-├── README.md
-└── .env                                          # Add your own .env here
+└── README.md
 ```
 
-## 📌 Required Environment Variables
+## 📌 Required in secrets.toml
 
-**Reminder: DO NOT use quotation marks (`""`)**
+**Example: LLM="gpt-4o-mini"**
 
 | Variable         | Description                 | Example                 |
 |------------------|-----------------------------|--------------------------|
 | `LLM`            | Model name (LLM)            | `gpt-4o-mini`            |
 | `OPENAI_API_KEY` | Your OpenAI API key         | `sk-...`                 |
+
+
+## 🚀 Visit the App
+
+🔗 [Click here to try the AI Email Assistant for CRM](https://ai-email-assistant-for-crm.streamlit.app/)

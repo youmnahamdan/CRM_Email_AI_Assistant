@@ -1,3 +1,4 @@
 developer_notes.txt
 .env
-logs
+.streamlit
+secrets.toml
