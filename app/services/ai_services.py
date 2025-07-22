@@ -9,7 +9,7 @@ from loaders.model_loader import load_model
 from loaders.prompt_loader import load_prompt
 from loaders.runnable_parallel_loader import load_runnable_parallel
 
-handler = RotatingFileHandler('logs/ai_services_log.txt', maxBytes=1000000, backupCount=3)
+handler = RotatingFileHandler('app/logs/ai_services_log.txt', maxBytes=1000000, backupCount=3)
 logging.basicConfig(handlers=[handler], level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
